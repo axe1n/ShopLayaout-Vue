@@ -1,4 +1,4 @@
-# ShopLayaout-Vue
+# ShopLayaout-Vue-and-Node.js-Server
 
 The frontend is implemented on Vue, and the server part on Node.js
 
