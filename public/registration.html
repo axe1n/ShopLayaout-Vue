@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>Registration</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <header>
+                <nav class="menu">
+                    <div class="menu-wrapp">
+                        <div class="menu__left-side">
+                            <a href="index.html"><img class="logo-icon" src="img/logo.svg" alt="logo"></a>
+                            <a href="#"><img class="search-icon" src="img/search.svg" alt="search"></a>
+                        </div>
+                        <div class="menu__right-side">
+                            <burger_menu></burger_menu>
+                            <a href="registration.html"><img class="user-icon" src="img/user.svg" alt="user"></a>
+                            <cart></cart>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="main-top-wrapper">
+                    <div class="main-top main-top-flex container">
+                        <h1>REGISTRATION</h1>
+                    </div>
+                </div>
+                <div class="registration-main-bottom container">
+                    <div class="registration-main-bottom-left">
+                        <div class="b-inputForm">
+                            <form class="b-inputForm__form" action="#">
+                                <h3 class="b-inputForm__headerReg">Your Name</h3>
+                                <input class="b-inputForm__input" type="text" name="name" value=""
+                                    placeholder="First Name">
+                                <input class="b-inputForm__input" type="text" name="surname" value=""
+                                    placeholder="Last Name">
+                                <div class="b-inputForm__sex b-inputForm__sex_marginTopBottom">
+                                    <label class="b-inputForm__label"><input type="radio" name="sex">Male</label>
+                                    <label class="b-inputForm__label"><input type="radio" name="sex">Female</label>
+                                </div>
+                                <h3 class="b-inputForm__headerReg">Login details</h3>
+                                <input class="b-inputForm__input" type="email" name="email" value=""
+                                    placeholder="Email">
+                                <input class="b-inputForm__input" type="password" name="password" value=""
+                                    placeholder="Password">
+                                <p class="b-inputForm__passwordReq">Please use 8 or more characters, with at least 1
+                                    number
+                                    and a
+                                    mixture of uppercase and lowercase letters</p>
+                                <a class="b-inputForm__anotherSubmit" href="#">
+                                    JOIN NOW
+                                    <img src="img/anotherArrow.svg" alt="arrow">
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="registration-main-bottom-right">
+                        <h2>LOYALTY HAS ITS PERKS</h2>
+                        <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting
+                            with
+                            these as soon as you join:</p>
+                        <ul>
+                            <li>15% off welcome offer</li>
+                            <li>Free shipping, returns and exchanges on all orders</li>
+                            <li>$10 off a purchase on your birthday</li>
+                            <li>Early access to products</li>
+                            <li>Exclusive offers & rewards</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer-middle-back">
+                <div class="footer-middle container">
+                    <div class="fm-left">
+                        <img src="img/Intersect.png" alt="photo of a woman">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                    </div>
+                    <div class="fm-right">
+                        <H3>SUBSCRIBE</H3>
+                        <span>FOR OUR NEWLETTER AND PROMOTION</span>
+                        <form class="subscribe-form" action="#">
+                            <input class="email" type="email" placeholder="Enter Your Email">
+                            <input class="subscribeButton" type="submit" id="email" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-back">
+                <div class="footer-bottom container">
+                    <div class="copyright">&copy; 2022 Brand All Rights Reserved.</div>
+                    <div class="social-media-wrapper">
+                        <nav class="social-media">
+                            <a href="#"><img src="img/icon-facebook.svg" alt="FaceBook"></a>
+                            <a href="#"><img src="img/icon-instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="img/icon-pinterest.svg" alt="Pinterest"></a>
+                            <a href="#"><img src="img/icon-twitter.svg" alt="Twitter"></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./js/CartComponent.js"></script>
+    <script src="./js/BurgerMenuComponent.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

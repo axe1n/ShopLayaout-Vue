@@ -1,0 +1,64 @@
+.b-checkout {
+    width: 360px;
+    height: 214px;
+    padding: 39px 34px 42px 44px;
+    background: #F5F3F3;
+    text-align: right;
+
+    &__subTotal {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        margin-bottom: 12px;
+    }
+
+    &__grandTotal {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+        margin-bottom: 21px;
+    }
+
+    &__price {
+        margin-left: 25px;
+
+        &_pink {
+            color: #F16D7F;
+        }
+    }
+
+    &__strip {
+        width: 275px;
+        margin-bottom: 17px;
+        border-top: 1px solid #E2E2E2;
+    }
+
+    &__checkoutBtn {
+        display: block;
+        padding: 16px 41px;
+        background: #F16D7F;
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 1024px) {
+    .b-checkout {
+        &_marginTop {
+            margin-top: 38px;
+        }
+    }
+}
+
+@media (max-width: 667px) {
+    .b-checkout {
+        &_marginTop {
+            margin-top: 48px;
+        }
+    }
+}

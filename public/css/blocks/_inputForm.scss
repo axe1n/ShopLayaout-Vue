@@ -1,0 +1,98 @@
+.b-inputForm {
+    &__headerCart {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+
+    &__headerReg {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+
+    &__form {
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    &__input {
+        width: 360px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        padding-left: 17px;
+
+        &::placeholder {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+        }
+    }
+
+    &__sex {
+        width: 132px;
+        margin-top: 33px;
+        margin-bottom: 33px;
+        display: flex;
+        justify-content: space-between;
+
+        &_marginTopBottom {
+            margin-top: 33px;
+            margin-bottom: 33px;
+        }
+    }
+
+    &__label {
+        display: flex;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #000000;
+
+        input {
+            margin-right: 10px;
+        }
+    }
+
+    &__passwordReq {
+        width: 360px;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #B1B1B1;
+    }
+
+    &__submit {
+        width: 100px;
+        height: 35px;
+        border: 1px solid #A4A4A4;
+        background: #FFFFFF;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        cursor: pointer;
+    }
+
+    &__anotherSubmit {
+        width: 167px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F16D7F;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+
+        img {
+            margin-left: 20px;
+        }
+    }
+
+
+}

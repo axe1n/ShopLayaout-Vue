@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <header>
+                <nav class="menu">
+                    <div class="menu-wrapp">
+                        <div class="menu__left-side">
+                            <a href="index.html"><img class="logo-icon" src="img/logo.svg" alt="logo"></a>
+                            <a href="#"><img class="search-icon" src="img/search.svg" alt="search"></a>
+                        </div>
+                        <div class="menu__right-side">
+                            <burger_menu></burger_menu>
+                            <a href="registration.html"><img class="user-icon" src="img/user.svg" alt="user"></a>
+                            <cart></cart>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="main-top-wrapper">
+                    <div class="main-top main-top-flex container">
+                        <h1>SHOPPING CART</h1>
+                    </div>
+                </div>
+                <div class="cart-main-bottom container">
+                    <div class="cart-main-left-side">
+                        <div class="cart-cards">
+                            <article class="b-cartCard">
+                                <div class="b-cartCard__wrapper">
+                                    <img class="b-cartCard__image" src="img/mango-people-t-shirt-0.png"
+                                        alt="mango t-shirt">
+                                    <div class="b-cartCard__innerWrapper">
+                                        <div class="b-cartCard__info">
+                                            <h2>MANGO PEOPLE T-SHIRT</h2>
+                                            <p>Price: <span class="b-cartCard__price">$300</span></p>
+                                            <p>Color: Red</p>
+                                            <p>Size: Xl</p>
+                                            <p>Quantity: <span class="b-cartCard__qty">2</span></p>
+                                        </div>
+                                        <div class="b-cartCard__delete-card">
+                                            <img src="img/icon-delete.svg" alt="delete item">
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="b-cartCard">
+                                <div class="b-cartCard__wrapper">
+                                    <img class="b-cartCard__image" src="img/mango-people-t-shirt-1.png"
+                                        alt="mango t-shirt">
+                                    <div class="b-cartCard__innerWrapper">
+                                        <div class="b-cartCard__info">
+                                            <h2>MANGO PEOPLE T-SHIRT</h2>
+                                            <p>Price: <span class="b-cartCard__price">$300</span></p>
+                                            <p>Color: Red</p>
+                                            <p>Size: Xl</p>
+                                            <p>Quantity: <span class="b-cartCard__qty">2</span></p>
+                                        </div>
+                                        <div class="b-cartCard__delete-card">
+                                            <img src="img/icon-delete.svg" alt="delete item">
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="cart-buttons">
+                            <div class="b-clearShopCartBtn">
+                                CLEAR SHOPPING CART
+                            </div>
+                            <a class="b-continueShopBtn" href="#">
+                                CONTINUE SHOPPING
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart-main-right-side">
+                        <div class="b-inputForm">
+                            <form class="b-inputForm__form" action="#">
+                                <h3 class="b-inputForm__headerCart">SHIPPING ADRESS</h3>
+                                <input class="b-inputForm__input" type="text" name="country" value=""
+                                    placeholder="Bangladesh">
+                                <input class="b-inputForm__input" type="text" name="state" value="" placeholder="State">
+                                <input class="b-inputForm__input" type="text" name="postcode" value=""
+                                    placeholder="Postcode / Zip">
+                                <input class="b-inputForm__submit" type="submit" value="GET A QUOTE">
+                            </form>
+                        </div>
+                        <div class="b-checkout b-checkout_marginTop">
+                            <p class="b-checkout__subTotal">SUB TOTAL <span class="b-checkout__price">$900</span></p>
+                            <p class="b-checkout__grandTotal">GRAND TOTAL <span
+                                    class="b-checkout__price b-checkout__price_pink">$900</span></p>
+                            <div class="b-checkout__strip"></div>
+                            <a class="b-checkout__checkoutBtn" href="#">PROCEED TO CHECKOUT</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer-middle-back">
+                <div class="footer-middle container">
+                    <div class="fm-left">
+                        <img src="img/Intersect.png" alt="photo of a woman">
+                        <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                    </div>
+                    <div class="fm-right">
+                        <H3>SUBSCRIBE</H3>
+                        <span>FOR OUR NEWLETTER AND PROMOTION</span>
+                        <form class="subscribe-form" action="#">
+                            <input class="email" type="email" placeholder="Enter Your Email">
+                            <input class="subscribeButton" type="submit" id="email" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-back">
+                <div class="footer-bottom container">
+                    <div class="copyright">&copy; 2022 Brand All Rights Reserved.</div>
+                    <div class="social-media-wrapper">
+                        <nav class="social-media">
+                            <a href="#"><img src="img/icon-facebook.svg" alt="FaceBook"></a>
+                            <a href="#"><img src="img/icon-instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="img/icon-pinterest.svg" alt="Pinterest"></a>
+                            <a href="#"><img src="img/icon-twitter.svg" alt="Twitter"></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./js/CartComponent.js"></script>
+    <script src="./js/BurgerMenuComponent.js"></script>
+    <script src="./js/main.js"></script>
+</body>

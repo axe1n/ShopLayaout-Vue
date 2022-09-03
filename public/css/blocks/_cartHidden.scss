@@ -1,0 +1,57 @@
+.b-cartHidden {
+    position: absolute;
+    top: 52px;
+    right: 230px;
+    width: 700px;
+    background: #FFFFFF;
+    padding: 16px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    z-index: 1;
+
+
+    &__rowWrapper {
+        margin-bottom: 14.5px
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+    }
+
+    &__row_header {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #EF5B70;
+        margin-bottom: 16px;
+
+    }
+
+    &__btnWrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin: 2.5px;
+    }
+
+    &__delBtn {
+        padding: 2.5px;
+    }
+
+    &__total {
+        text-align: right;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
+
+    &__line {
+        border-bottom: 1px solid #EBEBEB;
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+}

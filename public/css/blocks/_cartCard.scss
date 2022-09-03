@@ -1,0 +1,118 @@
+.b-cartCard {
+    width: 652px;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__innerWrapper {
+        width: 390px;
+        display: flex;
+        justify-content: space-between;
+        margin: 22px 22px 62px 31px;
+    }
+
+    &__image {
+        max-width: 31%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__info {
+        width: 220px;
+
+        h2 {
+            margin-bottom: 42px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: #222222;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #575757;
+        }
+    }
+
+    &__price {
+        color: #EF5B70;
+    }
+
+    &__qty {
+        margin-left: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 1px solid #EAEAEA;
+        font-size: 18px;
+        line-height: 22px;
+        color: #656565;
+    }
+
+    &__delete-card {
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .b-cartCard {
+        width: 734px;
+
+        &__innerWrapper {
+            width: 472px;
+        }
+    }
+
+
+}
+
+@media (max-width: 667px) {
+    .b-cartCard {
+        width: 358px;
+
+        &__wrapper {
+            justify-content: space-between;
+        }
+
+        &__innerWrapper {
+            margin: 14px 14px;
+        }
+
+        &__info {
+            width: 144px;
+
+            h2 {
+                margin-bottom: 26px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+
+        &__delete-card {
+            img {
+                width: 9px;
+            }
+        }
+
+        &__qty {
+            padding-top: 1px;
+            margin-left: 24px;
+            padding-left: 9px;
+            padding-right: 9px;
+            border: 1px solid #EAEAEA;
+            font-size: 10px;
+            line-height: 12px;
+            color: #656565;
+        }
+    }
+}
