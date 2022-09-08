@@ -8,14 +8,18 @@ Vue.component('cart', {
       show: false,
     };
   },
-  mounted() {
-    this.$parent.getJson(`/api/cart`).then((data) => {
+
+  async mounted() {
+    try {
+      const data = await this.$parent.getJson('/api/cart');
       this.$data.quantityGoods = data.quantityGoods;
       this.$data.amount = data.amount;
       data.contents.forEach((product) => {
         this.$data.cartItems.push(product);
       });
-    });
+    } catch (error) {
+      console.log(error.message);
+    }
   },
 
   methods: {
@@ -33,63 +37,69 @@ Vue.component('cart', {
       );
     },
 
-    addProduct(item) {
-      const isСartFull = !!this.cartItems;
+    async addProduct(item) {
+      try {
+        const isСartFull = !!this.cartItems;
 
-      if (isСartFull) {
-        const findProduct = this.cartItems.find(
-          (cartProduct) => cartProduct.id_product === item.id_product
-        );
+        if (isСartFull) {
+          const findProduct = this.cartItems.find(
+            (cartProduct) => cartProduct.id_product === item.id_product
+          );
 
-        if (findProduct) {
-          return this.$parent
-            .putJson(`/api/cart/${findProduct.id_product}`, { quantity: 1 })
-            .then((data) => {
-              if (data.result) {
-                findProduct.quantity++;
-                this.$_changeAmount();
-                this.$_changeQuantityGoods();
-              }
-            });
+          if (findProduct) {
+            const data = await this.$parent.putJson(
+              `/api/cart/${findProduct.id_product}`,
+              { quantity: 1 }
+            );
+            if (data.result) {
+              findProduct.quantity++;
+              this.$_changeAmount();
+              return this.$_changeQuantityGoods();
+            }
+          }
         }
-      }
 
-      const product = Object.assign({ quantity: 1 }, item);
-      this.$parent.postJson(`/api/cart`, product).then((data) => {
+        const product = Object.assign({ quantity: 1 }, item);
+        const data = await this.$parent.postJson(`/api/cart`, product);
         if (data.result) {
           this.cartItems.push(product);
         }
         this.$_changeAmount();
         this.$_changeQuantityGoods();
-      });
+      } catch (error) {
+        console.error(error.message);
+      }
     },
 
-    removeProduct(item) {
-      const findProduct = this.cartItems.find(
-        (cartProduct) => cartProduct.id_product === item.id_product
-      );
+    async removeProduct(item) {
+      try {
+        const findProduct = this.cartItems.find(
+          (cartProduct) => cartProduct.id_product === item.id_product
+        );
 
-      if (findProduct.quantity > 1) {
-        return this.$parent
-          .putJson(`/api/cart/${findProduct.id_product}`, { quantity: -1 })
-          .then((data) => {
-            if (data.result) {
-              findProduct.quantity--;
-              this.$_changeAmount();
-              this.$_changeQuantityGoods();
-            }
-          });
-      }
-
-      this.$parent
-        .deleteJson(`/api/cart/${findProduct.id_product}`)
-        .then((data) => {
+        if (findProduct.quantity > 1) {
+          const data = await this.$parent.putJson(
+            `/api/cart/${findProduct.id_product}`,
+            { quantity: -1 }
+          );
           if (data.result) {
-            this.cartItems.splice(this.cartItems.indexOf(findProduct), 1);
+            findProduct.quantity--;
             this.$_changeAmount();
-            this.$_changeQuantityGoods();
+            return this.$_changeQuantityGoods();
           }
-        });
+        }
+
+        const data = await this.$parent.deleteJson(
+          `/api/cart/${findProduct.id_product}`
+        );
+        if (data.result) {
+          this.cartItems.splice(this.cartItems.indexOf(findProduct), 1);
+          this.$_changeAmount();
+          this.$_changeQuantityGoods();
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
     },
   },
 

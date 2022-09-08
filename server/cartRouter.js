@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
     if (err) {
       return res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
     }
-
     res.send(data);
   });
 });

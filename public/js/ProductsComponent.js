@@ -7,13 +7,16 @@ Vue.component('products', {
     };
   },
 
-  mounted() {
-    this.$parent.getJson('/api/products').then((data) => {
+  async mounted() {
+    try {
+      const data = await this.$parent.getJson('/api/products');
       data.forEach((product) => {
         this.$data.products.push(product);
         this.$data.filtered.push(product);
       });
-    });
+    } catch (error) {
+      console.error(error.message);
+    }
   },
 
   methods: {},

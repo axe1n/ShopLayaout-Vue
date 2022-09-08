@@ -5,58 +5,46 @@ const app = new Vue({
   el: '#app',
 
   methods: {
-    getJson(url) {
-      return fetch(url)
-        .then((result) => result.json())
-        .catch((error) => {
-          // console.log(error)
-          this.$refs.error.text = error;
-        });
+    async getJson(url) {
+      const res = await fetch(url);
+      const json = await res.json();
+      return json;
     },
 
-    postJson(url, data) {
-      return fetch(url, {
+    async postJson(url, data) {
+      const res = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      })
-        .then((result) => result.json())
-        .catch((error) => {
-          // console.log(error)
-          this.$refs.error.text = error;
-        });
+      });
+      const json = await res.json();
+      return json;
     },
 
-    putJson(url, data) {
-      return fetch(url, {
+    async putJson(url, data) {
+      const res = await fetch(url, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      })
-        .then((result) => result.json())
-        .catch((error) => {
-          // console.log(error)
-          this.$refs.error.text = error;
-        });
+      });
+      const json = await res.json();
+      return json;
     },
 
-    deleteJson(url, data) {
-      return fetch(url, {
+    async deleteJson(url, data) {
+      const res = await fetch(url, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      })
-        .then((result) => result.json())
-        .catch((error) => {
-          // console.log(error)
-          this.$refs.error.text = error;
-        });
+      });
+      const json = await res.json();
+      return json;
     },
   },
 });
