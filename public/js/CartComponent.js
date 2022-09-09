@@ -39,9 +39,9 @@ Vue.component('cart', {
 
     async addProduct(item) {
       try {
-        const isСartFull = !!this.cartItems;
+        const isСartFill = !!this.cartItems;
 
-        if (isСartFull) {
+        if (isСartFill) {
           const findProduct = this.cartItems.find(
             (cartProduct) => cartProduct.id_product === item.id_product
           );
@@ -54,7 +54,8 @@ Vue.component('cart', {
             if (data.result) {
               findProduct.quantity++;
               this.$_changeAmount();
-              return this.$_changeQuantityGoods();
+              this.$_changeQuantityGoods();
+              return;
             }
           }
         }

@@ -33,7 +33,11 @@ const change = (cart, req) => {
 };
 
 const remove = (cart, req) => {
-  cart.contents.splice(cart.contents.indexOf(req.params), 1);
+  const findProduct = cart.contents.find(
+    (el) => el.id_product === +req.params.id
+  );
+
+  cart.contents.splice(cart.contents.indexOf(findProduct), 1);
   changeQuantityGoods(cart);
   changeAmount(cart);
 
