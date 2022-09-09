@@ -1,6 +1,6 @@
 .b-cartHidden {
     position: absolute;
-    top: 52px;
+    top: 48px;
     right: 230px;
     width: 700px;
     background: #FFFFFF;
@@ -53,5 +53,20 @@
         border-bottom: 1px solid #EBEBEB;
         margin-bottom: 16px;
         margin-top: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .b-cartHidden {
+        top: 57px;
+        right: 90px;
+    }
+}
+
+@media (max-width: 667px) {
+    .b-cartHidden {
+        top: 55px;
+        right: -8px;
+
     }
 }

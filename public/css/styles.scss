@@ -211,8 +211,8 @@ main {
 }
 
 .header-main {
-    height: 765px;
-    max-width: 1600px;
+    height: 510px;
+    max-width: 1140px;
     margin: 0 auto;
     display: flex;
 }
@@ -329,8 +329,8 @@ main {
     display: grid;
     justify-items: center;
     justify-content: center;
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .futuredGoods>h2 {
@@ -353,8 +353,8 @@ main {
     grid-template-columns: repeat(3, 360px);
     grid-template-rows: 580px;
     grid-gap: 30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .card {
