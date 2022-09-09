@@ -448,6 +448,22 @@ main {
   display: flex;
   align-items: center;
 }
+.menu__left-side .search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+.menu__left-side .search-field {
+  padding: 10px;
+  border-radius: 5px;
+  height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: black;
+}
 
 .menu__right-side {
   width: 169px;

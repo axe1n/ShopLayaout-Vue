@@ -77,6 +77,24 @@ main {
         display: flex;
         align-items: center;
     }
+
+    .search-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .search-field {
+        padding: 10px;
+        border-radius: 5px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: black;
+    }
 }
 
 .menu__right-side {
@@ -191,7 +209,6 @@ main {
     font-size: 12px;
     line-height: 14px;
     color: #FFFFFF;
-    // visibility: hidden;
 }
 
 .header-main {

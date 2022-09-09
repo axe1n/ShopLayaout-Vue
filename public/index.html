@@ -17,7 +17,7 @@
                     <div class="menu-wrapp">
                         <div class="menu__left-side">
                             <a href="index.html"><img class="logo-icon" src="img/logo.svg" alt="logo"></a>
-                            <a href="#"><img class="search-icon" src="img/search.svg" alt="search"></a>
+                            <filter_comp></filter_comp>
                         </div>
                         <div class="menu__right-side">
                             <burger_menu></burger_menu>
@@ -44,7 +44,7 @@
                     <div class="futuredGoods">
                         <h2>Fetured Items</h2>
                         <span>Shop for items based on what we featured in this week</span>
-                        <products></products>
+                        <products ref="products"></products>
                         <a href="#" class="all-prod-button">Browse All Product</a>
                     </div>
                     <div class="store-sections">
@@ -114,9 +114,10 @@
             </div>
         </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-
+    <script src="./js/FilterComponent.js"></script>
     <script src="./js/ProductsComponent.js"></script>
     <script src="./js/CartComponent.js"></script>
     <script src="./js/BurgerMenuComponent.js"></script>

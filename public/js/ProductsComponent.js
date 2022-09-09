@@ -1,8 +1,6 @@
 Vue.component('products', {
   data() {
     return {
-      catalogUrl: '/catalogData.json',
-      filtered: [],
       products: [],
     };
   },
@@ -12,19 +10,31 @@ Vue.component('products', {
       const data = await this.$parent.getJson('/api/products');
       data.forEach((product) => {
         this.$data.products.push(product);
-        this.$data.filtered.push(product);
       });
     } catch (error) {
       console.error(error.message);
     }
   },
 
-  methods: {},
+  methods: {
+    async filter(userSearch) {
+      try {
+        const data = await this.$parent.getJson('/api/products');
+        const regexp = new RegExp(userSearch, 'i');
+
+        this.$data.products = data.filter((product) =>
+          regexp.test(product.product_name)
+        );
+      } catch (error) {
+        console.error(error.message);
+      }
+    },
+  },
 
   template: `
   <div class="cards">
   <product 
-  v-for="item of this.filtered" 
+  v-for="item of this.products" 
   :product="item"
   :key="item.id_product" />
   </div>
