@@ -334,7 +334,7 @@
 
 .b-cartHidden {
   position: absolute;
-  top: 48px;
+  top: 44px;
   right: 230px;
   width: 700px;
   background: #FFFFFF;
@@ -384,7 +384,7 @@
 @media (max-width: 1024px) {
   .b-cartHidden {
     top: 57px;
-    right: 90px;
+    right: 0;
   }
 }
 @media (max-width: 667px) {
@@ -438,7 +438,7 @@ main {
 
 .menu {
   background: #222222;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .menu-wrapp {
@@ -475,6 +475,9 @@ main {
   line-height: 17px;
   color: black;
 }
+.menu__left-side .search-icon {
+  cursor: pointer;
+}
 
 .menu__right-side {
   width: 169px;
@@ -503,10 +506,11 @@ main {
   background: #FFFFFF;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   position: absolute;
-  top: 51px;
-  right: -229px;
+  top: 44px;
+  right: 0;
   display: grid;
   align-content: start;
+  z-index: 1;
 }
 .menu__hidden .menu__close {
   justify-self: end;
@@ -592,8 +596,8 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .hmain-right-side {
@@ -1281,6 +1285,7 @@ main {
   }
   .menu__hidden {
     right: -32px;
+    top: 57px;
   }
   .men-parka-img {
     -o-object-position: top;
@@ -1432,6 +1437,7 @@ main {
     justify-content: flex-end;
   }
   .menu__hidden {
+    top: 55px;
     right: -16px;
   }
   .hmain-left-side {

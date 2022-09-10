@@ -12,8 +12,10 @@ Vue.component('cart', {
   async mounted() {
     try {
       const data = await this.$parent.getJson('/api/cart');
+
       this.$data.quantityGoods = data.quantityGoods;
       this.$data.amount = data.amount;
+
       data.contents.forEach((product) => {
         this.$data.cartItems.push(product);
       });
@@ -51,6 +53,7 @@ Vue.component('cart', {
               `/api/cart/${findProduct.id_product}`,
               { quantity: 1 }
             );
+
             if (data.result) {
               findProduct.quantity++;
               this.$_changeAmount();
@@ -62,11 +65,12 @@ Vue.component('cart', {
 
         const product = Object.assign({ quantity: 1 }, item);
         const data = await this.$parent.postJson(`/api/cart`, product);
+
         if (data.result) {
           this.cartItems.push(product);
+          this.$_changeAmount();
+          this.$_changeQuantityGoods();
         }
-        this.$_changeAmount();
-        this.$_changeQuantityGoods();
       } catch (error) {
         console.error(error.message);
       }
@@ -86,7 +90,8 @@ Vue.component('cart', {
           if (data.result) {
             findProduct.quantity--;
             this.$_changeAmount();
-            return this.$_changeQuantityGoods();
+            this.$_changeQuantityGoods();
+            return;
           }
         }
 

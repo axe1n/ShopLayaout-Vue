@@ -8,6 +8,7 @@ Vue.component('products', {
   async mounted() {
     try {
       const data = await this.$parent.getJson('/api/products');
+
       data.forEach((product) => {
         this.$data.products.push(product);
       });

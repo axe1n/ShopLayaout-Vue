@@ -17,14 +17,13 @@
                     <div class="menu-wrapp">
                         <div class="menu__left-side">
                             <a href="index.html"><img class="logo-icon" src="img/logo.svg" alt="logo"></a>
-                            <a href="#"><img class="search-icon" src="img/search.svg" alt="search"></a>
+                            <filter_comp></filter_comp>
                         </div>
                         <div class="menu__right-side">
                             <burger_menu></burger_menu>
                             <a href="registration.html"><img class="user-icon" src="img/user.svg" alt="user"></a>
-                            <cart></cart>
+                            <cart ref="cart"></cart>
                         </div>
-                    </div>
                 </nav>
             </header>
             <main>
@@ -162,6 +161,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <script src="./js/FilterComponent.js"></script>
+    <script src="./js/ProductsComponent.js"></script>
     <script src="./js/CartComponent.js"></script>
     <script src="./js/BurgerMenuComponent.js"></script>
     <script src="./js/main.js"></script>

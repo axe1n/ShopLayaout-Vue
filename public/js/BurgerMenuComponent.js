@@ -5,10 +5,16 @@ Vue.component('burger_menu', {
     };
   },
 
+  methods: {
+    mouseleave() {
+      this.$data.show = false;
+    },
+  },
+
   template: `
   <div class="menu-burger-wrapper">
   <img class="menu-icon" src="img/menu-burger.svg" alt="menu" @click="show=!show">
-  <nav class="menu__hidden" v-if="show">
+  <nav class="menu__hidden" v-if="show" @mouseleave="mouseleave">
     <div class="menu__close"><img src="img/icon-delete.svg" alt="close menu" @click="show=!show"></div>
     <h2>MENU</h2>
     <ul>

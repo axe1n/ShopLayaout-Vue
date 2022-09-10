@@ -1,6 +1,6 @@
 .b-cartHidden {
     position: absolute;
-    top: 48px;
+    top: 44px;
     right: 230px;
     width: 700px;
     background: #FFFFFF;
@@ -59,7 +59,7 @@
 @media (max-width: 1024px) {
     .b-cartHidden {
         top: 57px;
-        right: 90px;
+        right: 0;
     }
 }
 
