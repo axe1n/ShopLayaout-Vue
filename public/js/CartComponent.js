@@ -1,7 +1,6 @@
 Vue.component('cart', {
   data() {
     return {
-      cartUrl: '/getBasket.json',
       cartItems: [],
       amount: 0,
       quantityGoods: 0,
@@ -87,6 +86,7 @@ Vue.component('cart', {
             `/api/cart/${findProduct.id_product}`,
             { quantity: -1 }
           );
+
           if (data.result) {
             findProduct.quantity--;
             this.$_changeAmount();
@@ -98,6 +98,7 @@ Vue.component('cart', {
         const data = await this.$parent.deleteJson(
           `/api/cart/${findProduct.id_product}`
         );
+
         if (data.result) {
           this.cartItems.splice(this.cartItems.indexOf(findProduct), 1);
           this.$_changeAmount();
